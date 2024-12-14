@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "*.page-template": "vue",
+        "*.layout-template": "vue",
+        "*.vue": "vue",
+        "*.json.liquid": "json",
+        "*.yaml.liquid": "yaml",
+        "*.md.liquid": "markdown",
+        "*.js.liquid": "liquid-javascript",
+        "*.css.liquid": "liquid-css",
+        "*.scss.liquid": "liquid-scss",
+        "CMakeLists.txt": "cmake",
+        "*.txt": "plaintext",
+        "*.html": "html",
+        "*.prolog": "prolog",
+        "*.make": "makefile",
+        "*.install": "shellscript",
+        "*.json": "jsonc",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "iostream": "cpp"
+    }
+}
