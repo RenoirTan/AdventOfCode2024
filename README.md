@@ -11,7 +11,7 @@ Wow
 | 05 | Kotlin | ✅ |
 | 06 | Scala | ✅ |
 | 07 | Common Lisp | ✅ |
-| 08 | COBOL |
+| 08 | SQL | ✅ |
 | 09 | x86 Assembly |
 | 10 | Fortran |
 | 11 | Rust |
