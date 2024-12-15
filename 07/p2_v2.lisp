@@ -50,7 +50,7 @@
 (defun is-line-ok (line)
    (let* ( ; let* evaluates variable one by one, instead of concurrently
       (top-splat (split-sequence:split-sequence #\: line)) ; split by ':'
-      (answer (parse-integer (first top-splat)))*
+      (answer (parse-integer (first top-splat)))
       (nums (mapcar #'parse-integer (split-sequence:split-sequence #\SPACE
          (string-trim " " (second top-splat))))) ; split numbers into list
    )
