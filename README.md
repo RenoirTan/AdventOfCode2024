@@ -10,7 +10,7 @@ Wow
 | 04 | Java | ✅ |
 | 05 | Kotlin | ✅ |
 | 06 | Scala | ✅ |
-| 07 | Common Lisp |
+| 07 | Common Lisp | ✅ |
 | 08 | COBOL |
 | 09 | x86 Assembly |
 | 10 | Fortran |
