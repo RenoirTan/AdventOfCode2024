@@ -3,7 +3,7 @@ SQLEAN_LINUX:=https://github.com/nalgeon/sqlean/releases/download/0.27.1/sqlean-
 
 sqlean/sqlean.so:
 	wget $(SQLEAN_LINUX)
-	unzip sqlean*.zip -d fuck
+	unzip sqlean*.zip -d sqlean
 
 run-p1: p1.sql run-p1.sh sqlean/sqlean.so
 	./run-p1.sh input.txt
