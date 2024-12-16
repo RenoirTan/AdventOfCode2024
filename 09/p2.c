@@ -8,8 +8,8 @@
 #define MAX_LEN (20480) // 0x5000
 
 char DISK_MAP[MAX_LEN] = { 0 };
-size_t FSIDX_UP_TO[MAX_LEN] = { 0 };
-char BLANK_SPACES[MAX_LEN] = { 0 };
+size_t FSIDX_UP_TO[MAX_LEN] = { 0 }; // number of bytes up to this block
+char BLANK_SPACES[MAX_LEN] = { 0 }; // number of blank spaces left in this empty block
 size_t FILE_OFFSETS[MAX_LEN] = { 0 }; // file_id: offset
 
 void convert_disk_map(size_t length) {
@@ -58,15 +58,19 @@ size_t find_blank_space(size_t limit, size_t length) {
 }
 
 void compact(size_t length) {
+    // going from right to left
     for (size_t bwd_dmidx = length - 1; bwd_dmidx >= 0 && bwd_dmidx < length; bwd_dmidx -= 2) {
         // printf("bwd_dmidx: %llu, DISK_MAP[bwd_dmidx]: %llu\n", bwd_dmidx, DISK_MAP[bwd_dmidx]);
+        // find a blank space before the current block
         size_t bsidx = find_blank_space(bwd_dmidx, DISK_MAP[bwd_dmidx]);
         // printf("bsidx: %llu\n", bsidx);
         if (bsidx != 0) {
+            // get the offset of the empty space from the start of the empty block
             size_t bsoffset = DISK_MAP[bsidx] - BLANK_SPACES[bsidx];
+            // get the offset from the start of the filesystem
             size_t fsidx = FSIDX_UP_TO[bsidx];
-            FILE_OFFSETS[bwd_dmidx / 2] = fsidx + bsoffset; // change file offset
-            BLANK_SPACES[bsidx] -= DISK_MAP[bwd_dmidx]; // get rid of blank space for file
+            FILE_OFFSETS[bwd_dmidx / 2] = fsidx + bsoffset; // change file offset of this file
+            BLANK_SPACES[bsidx] -= DISK_MAP[bwd_dmidx]; // get rid of used space for file
         }
     }
 }
