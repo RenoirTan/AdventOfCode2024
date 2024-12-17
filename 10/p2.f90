@@ -87,7 +87,7 @@ contains
     end function cascade
 end module
 
-program p1
+program p2
     use my_mod
     integer :: argc, status, map_len, x, y, sum
     character :: c
