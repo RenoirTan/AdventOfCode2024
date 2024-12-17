@@ -4,16 +4,16 @@ Wow
 
 | Day | Language | Status |
 | --- | -------- | ------ |
-| 01 | C | ✅ |
-| 02 | C++ | ✅ |
-| 03 | C# | ✅ |
-| 04 | Java | ✅ |
-| 05 | Kotlin | ✅ |
-| 06 | Scala | ✅ |
-| 07 | Common Lisp | ✅ |
-| 08 | SQL | ✅ |
-| 09 | x86 Assembly |
-| 10 | Fortran |
+| 01 | C | ✓ |
+| 02 | C++ | ✓ |
+| 03 | C# | ✓ |
+| 04 | Java | ✓ |
+| 05 | Kotlin | ✓ |
+| 06 | Scala | ✓ |
+| 07 | Common Lisp | ✓ |
+| 08 | SQL | ✓ |
+| 09 | x86_64 Assembly | ✓ |
+| 10 | Fortran | ✓ |
 | 11 | Rust |
 | 12 | Go |
 | 13 | Swift |
