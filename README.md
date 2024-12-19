@@ -16,7 +16,7 @@ Wow
 | 10 | Fortran | ✓ |
 | 11 | Rust | ✓ |
 | 12 | Go | ✓ |
-| 13 | Swift |
+| 13 | Swift | ✓ |
 | 14 | OCaml |
 | 15 | Perl 5 |
 | 16 | Raku |
