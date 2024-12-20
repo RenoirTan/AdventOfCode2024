@@ -19,5 +19,8 @@
         "ostream": "cpp",
         "*.tcc": "cpp",
         "iostream": "cpp"
+    },
+    "ocaml.sandbox": {
+        "kind": "global"
     }
 }
