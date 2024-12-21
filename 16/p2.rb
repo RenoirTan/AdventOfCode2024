@@ -1,4 +1,4 @@
-# takes 95.39s on i7-11800H @ 4.6GHz
+# takes 9.19s on i7-11800H @ 4.6GHz
 
 require "matrix"
 require "set"
@@ -21,19 +21,18 @@ def calculate_cost_of_rotation(src, dest)
 end
 
 class Reindeer
-  attr_accessor :pos, :dir, :score, :route
+  attr_accessor :pos, :dir, :score, :prev
 
   def initialize(pos, dir)
     @pos = pos
     @dir = dir
     @score = 0
-    @route = Set[@pos]
+    @prev = nil
   end
 
   def move
     @pos += @dir
     @score += 1
-    @route.add(@pos)
   end
 
   def turn_to(dest)
@@ -48,8 +47,18 @@ class Reindeer
   def clone
     cloned = Reindeer.new(@pos.clone, @dir.clone)
     cloned.score = @score
-    cloned.route = Set.new(@route)
+    cloned.prev = @prev
     return cloned
+  end
+
+  def route
+    passed_by = Set.new
+    reindeer = self
+    while reindeer != nil
+      passed_by.add(reindeer.pos)
+      reindeer = reindeer.prev
+    end
+    return passed_by
   end
 end
 
@@ -100,16 +109,18 @@ while reindeers.length >= 1
     end
     reindeers.push(new_reindeer)
   end
-  reindeer.move
-  if visited_states.include?(reindeer.state)
+  new_reindeer = reindeer.clone
+  new_reindeer.move
+  new_reindeer.prev = reindeer
+  if visited_states.include?(new_reindeer.state)
     next
   end
-  x = reindeer.pos[0]
-  y = reindeer.pos[1]
+  x = new_reindeer.pos[0]
+  y = new_reindeer.pos[1]
   if maze[y][x] == "#"
     next
   end
-  reindeers.push(reindeer)
+  reindeers.push(new_reindeer)
 end
 
 puts best_seats.length
