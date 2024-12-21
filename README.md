@@ -20,7 +20,7 @@ Wow
 | 14 | OCaml | ✓ |
 | 15 | Perl 5 | ✓ |
 | 16 | Ruby | ✓ |
-| 17 | PHP |
+| 17 | PHP | ✓ |
 | 18 | TypeScript |
 | 19 | Python |
 | 20 | R |
