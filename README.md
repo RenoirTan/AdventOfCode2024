@@ -18,7 +18,7 @@ Wow
 | 12 | Go | ✓ |
 | 13 | Swift | ✓ |
 | 14 | OCaml | ✓ |
-| 15 | Perl 5 |
+| 15 | Perl 5 | ✓ |
 | 16 | Raku |
 | 17 | PHP |
 | 18 | TypeScript |
