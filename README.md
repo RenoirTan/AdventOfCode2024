@@ -21,7 +21,7 @@ Wow
 | 15 | Perl 5 | ✓ |
 | 16 | Ruby | ✓ |
 | 17 | PHP | ✓ |
-| 18 | TypeScript |
+| 18 | TypeScript | ✓ |
 | 19 | Python |
 | 20 | R |
 | 21 | Erlang |
