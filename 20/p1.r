@@ -1,7 +1,5 @@
 library(collections, warn.conflicts = FALSE)
-library(glue)
 library(readr)
-library(sets)
 
 king_moves <- list(
   c(1, 0),
