@@ -127,4 +127,4 @@ program p2
 
     sum = cascade(topo_map, map_len)
     print *, sum
-end program p1
+end program p2
