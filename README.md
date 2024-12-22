@@ -23,7 +23,7 @@ Wow
 | 17 | PHP | ✓ |
 | 18 | TypeScript | ✓ |
 | 19 | Python | ✓ |
-| 20 | R |
+| 20 | R | ✓ |
 | 21 | Erlang |
 | 22 | Elixir |
 | 23 | Haskell |
