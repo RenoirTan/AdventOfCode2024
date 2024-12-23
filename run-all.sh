@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function everything() {
-    for i in {1..21}; do
+    for i in {1..22}; do
         day=$(printf "%02d" $i)
         env -C $day/ make run-p1
         env -C $day/ make run-p2
