@@ -24,7 +24,7 @@ Wow
 | 18 | TypeScript | ✓ |
 | 19 | Python | ✓ |
 | 20 | R | ✓ |
-| 21 | Erlang |
+| 21 | Erlang | ✓ |
 | 22 | Elixir |
 | 23 | Haskell |
 | 24 | Zig |
