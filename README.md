@@ -26,6 +26,6 @@ Wow
 | 20 | R | ✓ |
 | 21 | Erlang | ✓ |
 | 22 | Elixir | ✓ |
-| 23 | Haskell |
+| 23 | Haskell | ✓ |
 | 24 | Zig |
 | 25 | Holy C |
