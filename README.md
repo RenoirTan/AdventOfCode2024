@@ -28,4 +28,6 @@ Wow
 | 22 | Elixir | ✓ |
 | 23 | Haskell | ✓ |
 | 24 | Zig | ✓ |
-| 25 | Holy C |
+| 25 | Holy C* | ✓ |
+
+\* Couldn't find a working compiler, used Python to get answer.
